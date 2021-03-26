@@ -105,38 +105,41 @@ function hTblet ()
 
 /// total of the table function
 
- function Fotable(){
+function Fotable() {
 
-  let tr1El=document.createElement('tr');
+  let tr1El = document.createElement('tr');
   tableEl.appendChild(tr1El);
-  for(let i=0;i<=totalPurhour.length;i++){
-    if(i==0){
-      let tdEl=document.createElement('td');
+ 
+  for (let i = 0; i <= totalPurhour.length; i++) {
+    if (i == 0) {
+      let tdEl = document.createElement('td');
       tr1El.appendChild(tdEl);
-      tdEl.textContent='Total';
+      tdEl.textContent = 'Total';
     }
-    
-   else if(i!==0 && i<totalPurhour.length){
-      
-  let tdEl=document.createElement('td');
-  tr1El.appendChild(tdEl);
-  tdEl.textContent=totalPurhour[i];
-  }
-  
 
-  else if(i==totalPurhour.length){
+    else if (i !== 0 && i < totalPurhour.length) {
 
-    for(let j=0;j<totalPurhour.length;j++){
-       y +=totalPurhour[j];
+      let tdEl = document.createElement('td');
+      tr1El.appendChild(tdEl);
+      tdEl.textContent = totalPurhour[i];
     }
-    let tdEl=document.createElement('td');
-  tr1El.appendChild(tdEl);
-  tdEl.textContent=y;
-    
+
+
+    else if (i == totalPurhour.length) {
+      for (let i = 0; i < cookiesAry.length; i++) {
+
+        for (let j = 0; j < totalPurhour.length; j++) {
+          y += totalPurhour[j];
+        }
+
+
+      }
+      let td1El = document.createElement('td');
+      tr1El.appendChild(td1El);
+      td1El.textContent = y;
+    }
   }
-  // console.log(totalPurhour);
-  }
-  
+
 };
 function delRaw(){
   let lastRow=(tableEl.rows.length)-1;
