@@ -20,6 +20,9 @@ img{
       
     
 }
+body p{
+	color: red;
+}
 #bck{
 	width: 300px;
     border: 1px solid #ddd;
@@ -43,6 +46,11 @@ img{
    
 }
 
+#imge1{
+	position: relative;
+	bottom: 500px;
+	right: 400px;
+}
 
 body {
 	height: 100%;
